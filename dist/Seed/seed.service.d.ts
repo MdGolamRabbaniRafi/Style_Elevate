@@ -1,0 +1,42 @@
+import { Repository } from 'typeorm';
+import { UserEntity } from '../User/User.entity';
+import { CategoryEntity } from '../Category/Category.entity';
+import { ProductEntity } from '../Product/Product.entity';
+import { OrderEntity } from '../Order/Order.entity';
+import { OrderProductMapperEntity } from '../Mapper/Order Product Mapper/OrderProductMapper.entity';
+import { ReviewRatingEntity } from '../Review And Rating/ReviewRating.entity';
+import { BannerEntity } from '../Banner/Banner.entity';
+import { WishListEntity } from 'src/wishlist/wishlist.entity';
+import { OfferEntity } from 'src/Offer/Offer.entity';
+import { PaymentEntity } from 'src/Payment/Payment.entity';
+import { CartEntity } from 'src/Cart/Cart.entity';
+import { RootUserEntity } from 'src/Auth/Root-User/root-user.entity';
+export declare class SeedService {
+    private readonly userRepo;
+    private readonly categoryRepo;
+    private readonly productRepo;
+    private orderRepo;
+    private orderProductMapperRepo;
+    private reviewRatingRepo;
+    private readonly bannerRepo;
+    private readonly wishlistRepo;
+    private readonly offerRepo;
+    private readonly paymentRepo;
+    private readonly cartRepo;
+    private readonly rootUserRepo;
+    constructor(userRepo: Repository<UserEntity>, categoryRepo: Repository<CategoryEntity>, productRepo: Repository<ProductEntity>, orderRepo: Repository<OrderEntity>, orderProductMapperRepo: Repository<OrderProductMapperEntity>, reviewRatingRepo: Repository<ReviewRatingEntity>, bannerRepo: Repository<BannerEntity>, wishlistRepo: Repository<WishListEntity>, offerRepo: Repository<OfferEntity>, paymentRepo: Repository<PaymentEntity>, cartRepo: Repository<CartEntity>, rootUserRepo: Repository<RootUserEntity>);
+    runSeed(): Promise<{
+        message: string;
+    }>;
+    private seedUsers;
+    private seedCategories;
+    private seedProducts;
+    private seedOrders;
+    seedReviews(): Promise<void>;
+    seedBanners(): Promise<void>;
+    seedWishList(): Promise<void>;
+    seedOffer(): Promise<void>;
+    seedPayments(): Promise<void>;
+    seedCarts(): Promise<void>;
+    seedRootUsers(): Promise<void>;
+}

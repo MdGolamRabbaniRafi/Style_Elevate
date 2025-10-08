@@ -10,7 +10,7 @@ import { WishListEntity } from 'src/wishlist/wishlist.entity';
 import { OfferEntity } from 'src/Offer/Offer.entity';
 import { PaymentEntity } from 'src/Payment/Payment.entity';
 import { CartEntity } from 'src/Cart/Cart.entity';
-import { RootUserEntity } from 'src/Auth/Root-User/root-user.entity';
+import { RootUserEntity } from 'src/Root-User/root-user.entity';
 export declare class SeedService {
     private readonly userRepo;
     private readonly categoryRepo;

@@ -19,7 +19,7 @@ import { JwtGaurd } from './Gaurds/jwt-auth.gaurd';
 import { LocalGaurd } from './Gaurds/local-auth.gaurd';
 import { refreshJwtGaurd } from './Gaurds/refresh-jwt-auth.gaurd';
 import { ApiTags } from '@nestjs/swagger';
-import { RootUserEntity } from './Root-User/root-user.entity';
+import { RootUserEntity } from '../Root-User/root-user.entity';
 
 @ApiTags('auth')
 @Controller('auth')
@@ -28,7 +28,7 @@ export class AuthController {
 
   @UseGuards(LocalGaurd)
   @Post('login')
-  async login(@Body() userEntity: UserEntity |RootUserEntity, @Request() req) {
+  async login(@Body() userEntity: UserEntity | RootUserEntity, @Request() req) {
     // console.log("ewasdcasd  :"+req.user.name)
     return await this.authService.login(req.user);
     //  return await this.authService.validateUser(userEntity.email,userEntity.password)

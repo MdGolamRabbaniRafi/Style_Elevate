@@ -22,7 +22,7 @@ const wishlist_entity_1 = require("../wishlist/wishlist.entity");
 const Offer_entity_1 = require("../Offer/Offer.entity");
 const Payment_entity_1 = require("../Payment/Payment.entity");
 const Cart_entity_1 = require("../Cart/Cart.entity");
-const root_user_entity_1 = require("../Auth/Root-User/root-user.entity");
+const root_user_entity_1 = require("../Root-User/root-user.entity");
 let SeedModule = class SeedModule {
 };
 exports.SeedModule = SeedModule;

@@ -28,7 +28,7 @@ const wishlist_entity_1 = require("../wishlist/wishlist.entity");
 const Offer_entity_1 = require("../Offer/Offer.entity");
 const Payment_entity_1 = require("../Payment/Payment.entity");
 const Cart_entity_1 = require("../Cart/Cart.entity");
-const root_user_entity_1 = require("../Auth/Root-User/root-user.entity");
+const root_user_entity_1 = require("../Root-User/root-user.entity");
 let SeedService = class SeedService {
     constructor(userRepo, categoryRepo, productRepo, orderRepo, orderProductMapperRepo, reviewRatingRepo, bannerRepo, wishlistRepo, offerRepo, paymentRepo, cartRepo, rootUserRepo) {
         this.userRepo = userRepo;
@@ -685,6 +685,7 @@ let SeedService = class SeedService {
                 role: 'superadmin',
                 Image: 'https://via.placeholder.com/150?text=Fahad+Khan',
                 isActive: true,
+                netBalance: 0,
             },
             {
                 name: 'Golam Rabbani Rafi',
@@ -696,6 +697,7 @@ let SeedService = class SeedService {
                 role: 'admin',
                 Image: 'https://via.placeholder.com/150?text=Golam+Rafi',
                 isActive: true,
+                netBalance: 0,
             },
             {
                 name: 'Sojib1',
@@ -707,6 +709,7 @@ let SeedService = class SeedService {
                 role: 'admin',
                 Image: 'https://via.placeholder.com/150?text=Sojib1',
                 isActive: true,
+                netBalance: 0,
             },
             {
                 name: 'Sojib2',
@@ -718,6 +721,7 @@ let SeedService = class SeedService {
                 role: 'manager',
                 Image: 'https://via.placeholder.com/150?text=Sojib2',
                 isActive: true,
+                netBalance: 0,
             },
             {
                 name: 'Mobin',
@@ -729,6 +733,7 @@ let SeedService = class SeedService {
                 role: 'manager',
                 Image: 'https://via.placeholder.com/150?text=Mobin',
                 isActive: true,
+                netBalance: 0,
             },
         ]);
         await this.rootUserRepo.save(rootUsers);

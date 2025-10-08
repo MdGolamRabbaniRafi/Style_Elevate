@@ -18,7 +18,7 @@ const crypto = require("crypto");
 const jwt = require("jsonwebtoken");
 const EmailOTP_service_1 = require("../EmailOTP/EmailOTP.service");
 const token_service_1 = require("./token/token.service");
-const root_user_service_1 = require("./Root-User/root-user.service");
+const root_user_service_1 = require("../Root-User/root-user.service");
 let AuthService = class AuthService {
     constructor(userService, rootUserService, jwtService, otpService, tokenService) {
         this.userService = userService;

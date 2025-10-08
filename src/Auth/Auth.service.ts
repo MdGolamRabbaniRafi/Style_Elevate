@@ -12,8 +12,8 @@ import * as crypto from 'crypto';
 import * as jwt from 'jsonwebtoken';
 import { EmailOTPService } from 'src/EmailOTP/EmailOTP.service';
 import { TokenService } from './token/token.service';
-import { RootUserEntity } from './Root-User/root-user.entity';
-import { RootUserService } from './Root-User/root-user.service';
+import { RootUserEntity } from '../Root-User/root-user.entity';
+import { RootUserService } from '../Root-User/root-user.service';
 
 @Injectable()
 export class AuthService {

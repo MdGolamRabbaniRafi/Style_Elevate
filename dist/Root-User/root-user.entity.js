@@ -10,14 +10,12 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.RootUserEntity = void 0;
+const balance_entity_1 = require("../Balance/balance.entity");
+const base_entity_1 = require("../Common/base.entity");
 const typeorm_1 = require("typeorm");
-let RootUserEntity = class RootUserEntity {
+let RootUserEntity = class RootUserEntity extends base_entity_1.BaseEntity {
 };
 exports.RootUserEntity = RootUserEntity;
-__decorate([
-    (0, typeorm_1.PrimaryGeneratedColumn)(),
-    __metadata("design:type", Number)
-], RootUserEntity.prototype, "Id", void 0);
 __decorate([
     (0, typeorm_1.Column)({ name: 'name', type: 'varchar', length: 150 }),
     __metadata("design:type", String)
@@ -51,9 +49,17 @@ __decorate([
     __metadata("design:type", String)
 ], RootUserEntity.prototype, "Image", void 0);
 __decorate([
+    (0, typeorm_1.Column)({ name: 'netBalance', type: 'decimal', nullable: true }),
+    __metadata("design:type", Number)
+], RootUserEntity.prototype, "netBalance", void 0);
+__decorate([
     (0, typeorm_1.Column)({ name: 'Status', type: 'boolean', default: true }),
     __metadata("design:type", Boolean)
 ], RootUserEntity.prototype, "isActive", void 0);
+__decorate([
+    (0, typeorm_1.OneToMany)(() => balance_entity_1.BalanceEntity, (balance) => balance.root),
+    __metadata("design:type", Array)
+], RootUserEntity.prototype, "balance", void 0);
 exports.RootUserEntity = RootUserEntity = __decorate([
     (0, typeorm_1.Entity)('RootUser')
 ], RootUserEntity);

@@ -22,8 +22,8 @@ const refreshToken_strategy_1 = require("./Strategies/refreshToken.strategy");
 const EmailOTP_entity_1 = require("../EmailOTP/EmailOTP.entity");
 const EmailOTP_service_1 = require("../EmailOTP/EmailOTP.service");
 const Token_module_1 = require("./token/Token.module");
-const root_user_service_1 = require("./Root-User/root-user.service");
-const root_user_entity_1 = require("./Root-User/root-user.entity");
+const root_user_service_1 = require("../Root-User/root-user.service");
+const root_user_entity_1 = require("../Root-User/root-user.entity");
 let AuthModule = class AuthModule {
 };
 exports.AuthModule = AuthModule;

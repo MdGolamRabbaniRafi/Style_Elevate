@@ -1,12 +1,9 @@
-
-import { WishListEntity } from 'src/wishlist/wishlist.entity';
-import { Column, Entity, OneToMany, PrimaryGeneratedColumn } from 'typeorm';
+import { BalanceEntity } from 'src/Balance/balance.entity';
+import { BaseEntity } from 'src/Common/base.entity';
+import { Column, Entity, ManyToOne, OneToMany } from 'typeorm';
 
 @Entity('RootUser')
-export class RootUserEntity {
-  @PrimaryGeneratedColumn()
-  Id: number;
-
+export class RootUserEntity extends BaseEntity {
   @Column({ name: 'name', type: 'varchar', length: 150 })
   name: string;
 
@@ -31,6 +28,12 @@ export class RootUserEntity {
   @Column({ name: 'User Image', type: 'varchar' })
   Image: string;
 
+  @Column({ name: 'netBalance', type: 'decimal', nullable: true })
+  netBalance: number;
+
   @Column({ name: 'Status', type: 'boolean', default: true })
   isActive: boolean;
+
+  @OneToMany(() => BalanceEntity, (balance) => balance.root)
+  balance: BalanceEntity[];
 }

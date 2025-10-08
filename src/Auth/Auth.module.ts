@@ -14,8 +14,8 @@ import { refreshTokenStrategy } from './Strategies/refreshToken.strategy';
 import { OTPEntity } from 'src/EmailOTP/EmailOTP.entity';
 import { EmailOTPService } from 'src/EmailOTP/EmailOTP.service';
 import { TokenModule } from './token/Token.module';
-import { RootUserService } from './Root-User/root-user.service';
-import { RootUserEntity } from './Root-User/root-user.entity';
+import { RootUserService } from '../Root-User/root-user.service';
+import { RootUserEntity } from '../Root-User/root-user.entity';
 // import { SimpleJwtGuard, SimpleJwtStrategy } from "./Gaurds/Simple_gaurd";
 @Module({
   imports: [

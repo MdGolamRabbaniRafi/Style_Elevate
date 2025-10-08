@@ -9,16 +9,17 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.RootUserModule = void 0;
 const common_1 = require("@nestjs/common");
 const typeorm_1 = require("@nestjs/typeorm");
-const Roles_gaurd_1 = require("../Role/Roles.gaurd");
+const Roles_gaurd_1 = require("../Auth/Role/Roles.gaurd");
 const root_user_controller_1 = require("./root-user.controller");
 const root_user_entity_1 = require("./root-user.entity");
 const root_user_service_1 = require("./root-user.service");
+const balance_entity_1 = require("../Balance/balance.entity");
 let RootUserModule = class RootUserModule {
 };
 exports.RootUserModule = RootUserModule;
 exports.RootUserModule = RootUserModule = __decorate([
     (0, common_1.Module)({
-        imports: [typeorm_1.TypeOrmModule.forFeature([root_user_entity_1.RootUserEntity])],
+        imports: [typeorm_1.TypeOrmModule.forFeature([root_user_entity_1.RootUserEntity, balance_entity_1.BalanceEntity])],
         controllers: [root_user_controller_1.RootUserController],
         providers: [root_user_service_1.RootUserService, Roles_gaurd_1.RolesGaurd],
         exports: [root_user_service_1.RootUserService, typeorm_1.TypeOrmModule],

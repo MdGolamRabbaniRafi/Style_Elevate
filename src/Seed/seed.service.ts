@@ -14,7 +14,7 @@ import { WishListEntity } from 'src/wishlist/wishlist.entity';
 import { OfferEntity } from 'src/Offer/Offer.entity';
 import { PaymentEntity } from 'src/Payment/Payment.entity';
 import { CartEntity } from 'src/Cart/Cart.entity';
-import { RootUserEntity } from 'src/Auth/Root-User/root-user.entity';
+import { RootUserEntity } from 'src/Root-User/root-user.entity';
 
 @Injectable()
 export class SeedService {
@@ -762,6 +762,7 @@ export class SeedService {
         role: 'superadmin',
         Image: 'https://via.placeholder.com/150?text=Fahad+Khan',
         isActive: true,
+        netBalance: 0,
       },
       {
         name: 'Golam Rabbani Rafi',
@@ -773,6 +774,7 @@ export class SeedService {
         role: 'admin',
         Image: 'https://via.placeholder.com/150?text=Golam+Rafi',
         isActive: true,
+        netBalance: 0,
       },
       {
         name: 'Sojib1',
@@ -784,6 +786,7 @@ export class SeedService {
         role: 'admin',
         Image: 'https://via.placeholder.com/150?text=Sojib1',
         isActive: true,
+        netBalance: 0,
       },
       {
         name: 'Sojib2',
@@ -795,6 +798,7 @@ export class SeedService {
         role: 'manager',
         Image: 'https://via.placeholder.com/150?text=Sojib2',
         isActive: true,
+        netBalance: 0,
       },
       {
         name: 'Mobin',
@@ -806,6 +810,7 @@ export class SeedService {
         role: 'manager',
         Image: 'https://via.placeholder.com/150?text=Mobin',
         isActive: true,
+        netBalance: 0,
       },
     ]);
 
